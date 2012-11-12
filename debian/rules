@@ -1,0 +1,28 @@
+#!/usr/bin/make -f
+
+DIST=$(shell /usr/bin/lsb_release -i -s)
+
+%:
+	dh $@ --with python2
+
+override_dh_auto_build:
+	# copy the right template into place
+	cp data/50unattended-upgrades.$(DIST) data/50unattended-upgrades
+	dh_auto_build
+
+override_dh_auto_clean:
+	# Sanity-check before upload.
+	set -e; if [ -e /usr/lib/python$(PYVER)/py_compile.py ]; then \
+		for f in unattended-upgrade unattended-upgrade-shutdown; do \
+			ln -nsf $$f $$f.py; \
+			python$(PYVER) /usr/lib/python$(PYVER)/py_compile.py \
+				$$f.py; \
+			rm -f $$f.py; \
+		done; \
+	fi
+	dh_auto_clean
+
+override_dh_installinit:
+	# we do not want to run the init script in the postinst/prerm, its
+	#  really only useful on shutdown, see Debian bug #645919
+	dh_installinit $@ --no-start -- stop 10 0 6 .

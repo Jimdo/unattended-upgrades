@@ -1,0 +1,25 @@
+2012-08-07 12:20:12,876 INFO Initial blacklisted packages: ant-doc
+2012-08-07 12:20:12,877 INFO Starting unattended upgrades script
+2012-08-07 12:20:12,877 INFO Allowed origins are: ['o=Ubuntu,a=lucid-security']
+2012-08-07 12:20:13,973 DEBUG Checking: ant-doc (["<Origin component:'main' archive:'lucid-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>", "<Origin component:'main' archive:'lucid-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>"])
+2012-08-07 12:20:13,975 DEBUG skipping blacklisted package 'ant-doc'
+2012-08-07 12:20:13,976 DEBUG Checking: apt-doc (["<Origin component:'main' archive:'lucid-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>", "<Origin component:'main' archive:'lucid-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>"])
+2012-08-07 12:20:14,020 DEBUG Checking: awstats (["<Origin component:'main' archive:'lucid-updates' origin:'Ubuntu' label:'Ubuntu' site:'archive.ubuntu.com' isTrusted:True>", "<Origin component:'main' archive:'lucid-security' origin:'Ubuntu' label:'Ubuntu' site:'security.ubuntu.com' isTrusted:True>"])
+2012-08-07 12:20:14,105 DEBUG pkgs that look like they should be upgraded: apt-doc
+awstats
+2012-08-07 12:20:17,510 DEBUG fetch.run() result: 0
+2012-08-07 12:20:17,511 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 153246 DestFile:'/home/egon/devel/unattended-upgrades/build-area/unattended-upgrades-0.79.3/test/aptroot/var/cache/apt/archives/apt-doc_0.7.25.3ubuntu9.13_all.deb' DescURI: 'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt-doc_0.7.25.3ubuntu9.13_all.deb' ID:1 ErrorText: ''>
+2012-08-07 12:20:17,515 DEBUG check_conffile_prompt('/home/egon/devel/unattended-upgrades/build-area/unattended-upgrades-0.79.3/test/aptroot/var/cache/apt/archives/apt-doc_0.7.25.3ubuntu9.13_all.deb')
+2012-08-07 12:20:17,520 DEBUG found pkg: apt-doc
+2012-08-07 12:20:17,522 DEBUG No conffiles in deb '/home/egon/devel/unattended-upgrades/build-area/unattended-upgrades-0.79.3/test/aptroot/var/cache/apt/archives/apt-doc_0.7.25.3ubuntu9.13_all.deb' (There is no member named 'conffiles')
+2012-08-07 12:20:17,525 DEBUG <apt_pkg.AcquireItem object:Status: 2 Complete: 1 Local: 0 IsTrusted: 1 FileSize: 951338 DestFile:'/home/egon/devel/unattended-upgrades/build-area/unattended-upgrades-0.79.3/test/aptroot/var/cache/apt/archives/awstats_6.9~dfsg-1ubuntu3.10.04.1_all.deb' DescURI: 'http://archive.ubuntu.com/ubuntu/pool/main/a/awstats/awstats_6.9~dfsg-1ubuntu3.10.04.1_all.deb' ID:2 ErrorText: ''>
+2012-08-07 12:20:17,528 DEBUG check_conffile_prompt('/home/egon/devel/unattended-upgrades/build-area/unattended-upgrades-0.79.3/test/aptroot/var/cache/apt/archives/awstats_6.9~dfsg-1ubuntu3.10.04.1_all.deb')
+2012-08-07 12:20:17,532 DEBUG found pkg: awstats
+2012-08-07 12:20:17,535 DEBUG blacklist: ['ant-doc']
+2012-08-07 12:20:17,587 DEBUG Checking (blacklist): apt-doc
+2012-08-07 12:20:17,628 DEBUG Checking (blacklist): awstats
+2012-08-07 12:20:17,669 DEBUG InstCount=2 DelCount=0 BrokenCout=0
+2012-08-07 12:20:17,676 INFO Option --dry-run given, *not* performing real actions
+2012-08-07 12:20:17,677 INFO Packages that are upgraded: apt-doc awstats
+2012-08-07 12:20:17,678 INFO Writing dpkg log to '/home/egon/devel/unattended-upgrades/build-area/unattended-upgrades-0.79.3/test/aptroot/var/log/unattended-upgrades-dpkg_2012-08-07_12:20:17.678406.log'
+2012-08-07 12:20:17,984 INFO All upgrades installed
